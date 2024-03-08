@@ -7,6 +7,8 @@
         <a href="sobre.php">Sobre</a>
         <a href="servicos.php">Serviços</a>
         <a href="faleconosco.php">Fale conosco</a>
+        <!-- Link para pesquisa de produtos com ícone de busca -->
+        <a href="pesquisa.php" class="product-search">Produtos <i class="fas fa-search"></i></a>
     </div>
     <div>
         <?php if (isset($_SESSION['login'])): ?>

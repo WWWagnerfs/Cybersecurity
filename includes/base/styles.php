@@ -343,4 +343,47 @@
     height: auto;
 }
 
+/* Estilos CSS para os produtos */
+.product {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.product img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    margin-bottom: 10px;
+}
+
+.product-info a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.product-info a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+.search-icon {
+    font-size: 20px;
+    margin-left: 10px; /* Adicione margem à esquerda para separar o ícone dos outros links */
+}
+
+
 </style>
