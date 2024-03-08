@@ -11,6 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <?php require_once 'includes/base/styles.php'; ?>
 </head>
 <body>
@@ -65,5 +66,14 @@
         </div>
     </section>
     </main>
+    <p>
+    <footer>
+    <div class="social-icons">
+        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon telegram"><i class="fab fa-telegram"></i></a>
+    </div>
+</footer>
 </body>
 </html>

@@ -32,11 +32,13 @@
         </form>
     </main>
     <p>
+    <footer>
     <div class="social-icons">
         <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
         <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
         <a href="#" class="social-icon telegram"><i class="fab fa-telegram"></i></a>
     </div>
+</footer>
 </body>
 </html>
