@@ -1,40 +1,41 @@
 <?php
-	session_start();
-    if (isset($_SESSION['login'])) {
-        header('Location: index.php');
-        exit();
-    }
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "seginf";
+session_start();
+if (isset($_SESSION['login'])) {
+    header('Location: index.php');
+    exit();
+}
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "seginf";
 
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-    $error_message = '';
+$error_message = '';
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $login = $_POST['login'];
-        $senha = $_POST['senha'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $login = $_POST['login'];
+    $senha = $_POST['senha'];
+    
+    $query = "SELECT * FROM login WHERE login = '$login'";
+    $result = mysqli_query($conn, $query);
+    
+    if (mysqli_num_rows($result) > 0) {
+        $error_message = "Este login já está em uso.";
+    } else {
+        $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+        $sql = "INSERT INTO login (login, senha) VALUES ('$login', '$senhaHash')";
         
-        // Verifica se o login já existe
-        $query = "SELECT * FROM login WHERE login = '$login'";
-        $result = mysqli_query($conn, $query);
-        if (mysqli_num_rows($result) > 0) {
-            $error_message = "Este login já está em uso.";
+        if (mysqli_query($conn, $sql)) {
+            echo "Login criado com sucesso!";
+            header('Location: logar.php');
+            exit();
         } else {
-            $sql = "INSERT INTO login (login, senha) VALUES ('$login', '$senha')";
-            if (mysqli_query($conn, $sql)) {
-                echo "Login criado com sucesso!";
-                // Redireciona para a página de login após o registro
-                header('Location: logar.php');
-                exit();
-            } else {
-                echo "Erro ao criar login: " . mysqli_error($conn);
-            }
+            echo "Erro ao criar login: " . mysqli_error($conn);
         }
-        mysqli_close($conn);
     }
+    mysqli_close($conn);
+}
 ?>
 
 <!DOCTYPE html>

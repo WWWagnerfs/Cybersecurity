@@ -1,35 +1,43 @@
 <?php
-    session_start();
-    if (isset($_SESSION['login'])) {
-        header('Location: index.php');
-        exit();
-    }
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "seginf";
+session_start();
+if (isset($_SESSION['login'])) {
+    header('Location: index.php');
+    exit();
+}
 
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "seginf";
 
-    $error_message = '';
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $login = $_POST['login'];
-        $senha = $_POST['senha'];
+$error_message = '';
 
-        $query = "SELECT * FROM login WHERE login = '$login' AND senha = '$senha'";
-        $result = mysqli_query($conn, $query);
-        $row = mysqli_num_rows($result);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $login = $_POST['login'];
+    $senha = $_POST['senha'];
 
-        if ($row == 1) {
+    $query = "SELECT * FROM login WHERE login = '$login'";
+    $result = mysqli_query($conn, $query);
+
+    if (mysqli_num_rows($result) == 1) {
+        $row = mysqli_fetch_assoc($result);
+        $senhaHash = $row['senha'];
+
+        if (password_verify($senha, $senhaHash)) {
             $_SESSION['login'] = $login;
             header('Location: index.php');
             exit();
         } else {
             $error_message = "Login ou senha inválidos!";
         }
+    } else {
+        $error_message = "Login ou senha inválidos!";
     }
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
