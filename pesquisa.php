@@ -32,14 +32,15 @@ if (isset($_GET['pesquisa'])) {
     <main>
         <h2>Resultados da Pesquisa</h2>
         <?php
+
         if ($resultadoProdutos->num_rows > 0) {
             while ($row = $resultadoProdutos->fetch_assoc()) {
                 echo '<div class="product">';
-                echo '<img src="' . $row['imagem'] . '" alt="' . $row['nome'] . '">';
+                echo '<img src="includes/imagens/' . $row['imagem'] . '" alt="' . $row['nome'] . '">';
                 echo '<div class="product-info">';
-                echo '<h3>' . $row['nome'] . '</h3>';
-                echo '<p>' . $row['descricao'] . '</p>';
-                echo '<p>Preço: $' . $row['preco'] . '</p>';
+                echo '<h3>Nome: ' . $row['nome'] . '</h3>';
+                echo '<h4>Descrição: ' . $row['descricao'] . '</h4>';
+                echo '<h5>Preço: $' . $row['preco'] . '</h5>';
                 echo '<a href="#">Mais informações</a>';
                 echo '</div>';
                 echo '</div>';
@@ -47,6 +48,7 @@ if (isset($_GET['pesquisa'])) {
         } else {
             echo '<p>Nenhum produto encontrado.</p>';
         }
+
         ?>
     </main>
     <footer>

@@ -149,241 +149,299 @@
     font-size: 16px;
     }
 
-.login-button:hover {
-    background-color: #0056b3;
-}
+    .login-button:hover {
+        background-color: #0056b3;
+    }
 
-/* Estilo para o botão de logout */
-.logout-button {
-    padding: 10px 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 16px;
-}
+    /* Estilo para o botão de logout */
+    .logout-button {
+        padding: 10px 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 16px;
+    }
 
-.logout-button:hover {
-    background-color: #c82333;
-}
-.content-item img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do seu contêiner */
-    height: auto; /* Mantém a proporção da imagem ao redimensionar */
-    display: block; /* Remove espaços extras abaixo da imagem */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
-}
-.content-item {
-    text-align: center; /* Centraliza o conteúdo horizontalmente */
-}
+    .logout-button:hover {
+        background-color: #c82333;
+    }
+    .content-item img {
+        max-width: 100%; /* Garante que a imagem não ultrapasse a largura do seu contêiner */
+        height: auto; /* Mantém a proporção da imagem ao redimensionar */
+        display: block; /* Remove espaços extras abaixo da imagem */
+        margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    }
+    .content-item {
+        text-align: center; /* Centraliza o conteúdo horizontalmente */
+    }
 
-.image-container {
-    position: relative; /* Define um contexto de posicionamento para os elementos internos */
-    display: inline-block; /* Permite que o contêiner se ajuste ao tamanho da imagem */
-}
+    .image-container {
+        position: relative; /* Define um contexto de posicionamento para os elementos internos */
+        display: inline-block; /* Permite que o contêiner se ajuste ao tamanho da imagem */
+    }
 
-.image-text {
-    position: absolute; /* Posiciona o texto de forma absoluta em relação ao contêiner pai */
-    top: 50%; /* Move o texto para 50% da altura do contêiner pai */
-    left: 50%; /* Move o texto para 50% da largura do contêiner pai */
-    transform: translate(-50%, -50%); /* Corrige o posicionamento para centralizar o texto */
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para legibilidade */
-    padding: 10px; /* Espaçamento interno para o texto */
-}
-.content-item {
-    text-align: center;
-}
+    .image-text {
+        position: absolute; /* Posiciona o texto de forma absoluta em relação ao contêiner pai */
+        top: 50%; /* Move o texto para 50% da altura do contêiner pai */
+        left: 50%; /* Move o texto para 50% da largura do contêiner pai */
+        transform: translate(-50%, -50%); /* Corrige o posicionamento para centralizar o texto */
+        background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para legibilidade */
+        padding: 10px; /* Espaçamento interno para o texto */
+    }
+    .content-item {
+        text-align: center;
+    }
 
-.image-container {
-    position: relative;
-    display: inline-block;
-    overflow: hidden; /* Impede que o texto ultrapasse a imagem */
-}
+    .image-container {
+        position: relative;
+        display: inline-block;
+        overflow: hidden; /* Impede que o texto ultrapasse a imagem */
+    }
 
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente para o overlay */
-    opacity: 0; /* Inicialmente oculto */
-    transition: opacity 0.3s ease; /* Transição suave para a opacidade */
-}
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente para o overlay */
+        opacity: 0; /* Inicialmente oculto */
+        transition: opacity 0.3s ease; /* Transição suave para a opacidade */
+    }
 
-.overlay-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-}
+    .overlay-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+    }
 
-.overlay-content h2 {
-    margin-bottom: 20px;
-}
+    .overlay-content h2 {
+        margin-bottom: 20px;
+    }
 
-.overlay-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
+    .overlay-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
 
-.overlay-button:hover {
-    background-color: #0056b3;
-}
+    .overlay-button:hover {
+        background-color: #0056b3;
+    }
 
-/* Ao passar o mouse sobre a imagem, exibe o overlay */
-.image-container:hover .image-overlay {
-    opacity: 1;
-}
-.social-icons {
-    text-align: center;
-}
+    /* Ao passar o mouse sobre a imagem, exibe o overlay */
+    .image-container:hover .image-overlay {
+        opacity: 1;
+    }
+    .social-icons {
+        text-align: center;
+    }
 
-.social-icon {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin: 0 10px;
-    border-radius: 50%;
-    background-color: #007bff;
-    line-height: 40px;
-    color: #fff;
-    font-size: 20px;
-    transition: background-color 0.3s;
-}
+    .social-icon {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+        border-radius: 50%;
+        background-color: #007bff;
+        line-height: 40px;
+        color: #fff;
+        font-size: 20px;
+        transition: background-color 0.3s;
+    }
 
-.social-icon:hover {
-    background-color: #0056b3;
-}
+    .social-icon:hover {
+        background-color: #0056b3;
+    }
 
-/* Estilos individuais para cada ícone */
-.facebook {
-    background-color: #3b5998;
-}
+    /* Estilos individuais para cada ícone */
+    .facebook {
+        background-color: #3b5998;
+    }
 
-.twitter {
-    background-color: #1da1f2;
-}
+    .twitter {
+        background-color: #1da1f2;
+    }
 
-.instagram {
-    background-color: #e4405f;
-}
+    .instagram {
+        background-color: #e4405f;
+    }
 
-.telegram {
-    background-color: #0088cc;
-}
+    .telegram {
+        background-color: #0088cc;
+    }
 
-.service-container {
-    position: relative;
-    display: inline-block;
-}
+    .service-container {
+        position: relative;
+        display: inline-block;
+    }
 
-.service-container img {
-    max-width: 100%;
-    height: auto;
-}
+    .service-container img {
+        max-width: 100%;
+        height: auto;
+    }
 
-.service-container:hover .service-item {
-    display: block;
-}
+    .service-container:hover .service-item {
+        display: block;
+    }
 
-.service-item {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #000; /* Defina a cor do texto aqui */
-    padding: 20px;
-    display: none;
-}
+    .service-item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #000; /* Defina a cor do texto aqui */
+        padding: 20px;
+        display: none;
+    }
 
-.service-item h3 {
-    margin-top: 0;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+    .service-item h3 {
+        margin-top: 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
 
-.service-item p {
-    margin-bottom: 10px;
-}
+    .service-item p {
+        margin-bottom: 10px;
+    }
 
-.service-item p:last-child {
-    margin-bottom: 0;
-}
+    .service-item p:last-child {
+        margin-bottom: 0;
+    }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    transition: opacity 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: opacity 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.service-container:hover .overlay {
-    opacity: 1;
-}
+    .service-container:hover .overlay {
+        opacity: 1;
+    }
 
-.service-image {
-    max-width: 100%;
-    height: auto;
-}
+    .service-image {
+        max-width: 100%;
+        height: auto;
+    }
 
-/* Estilos CSS para os produtos */
-.product {
-    display: flex;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-}
+    /* Estilos CSS para os produtos */
+    .product {
+        display: flex;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+    }
 
-.product img {
-    width: 200px;
-    height: auto;
-    object-fit: cover;
-}
+    .product img {
+        width: 200px;
+        height: auto;
+        object-fit: cover;
+    }
 
-.product-info {
-    padding: 20px;
-}
+    .product-info {
+        padding: 20px;
+    }
 
-.product-info h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
+    .product-info h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
 
-.product-info p {
-    margin-bottom: 10px;
-}
+    .product-info p {
+        margin-bottom: 10px;
+    }
 
-.product-info a {
-    text-decoration: none;
-    color: #007bff;
-}
+    .product-info a {
+        text-decoration: none;
+        color: #007bff;
+    }
 
-.product-info a:hover {
-    text-decoration: underline;
-    color: #0056b3;
-}
-.search-icon {
-    font-size: 20px;
-    margin-left: 10px; /* Adicione margem à esquerda para separar o ícone dos outros links */
-}
+    .product-info a:hover {
+        text-decoration: underline;
+        color: #0056b3;
+    }
+    .search-icon {
+        font-size: 20px;
+        margin-left: 10px; /* Adicione margem à esquerda para separar o ícone dos outros links */
+    }
+    .imagem-produto {
+        max-width: 100%;
+        height: auto;
+    }
+            
+    .form-container {
+                width: 400px;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
 
+            .form-container h2 {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .form-container label {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .form-container input,
+            .form-container textarea,
+            .form-container button {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            .form-container button {
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+
+            .form-container button:hover {
+                background-color: #0056b3;
+            }
+            .btn-primary {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
 
 </style>
